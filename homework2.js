@@ -2,29 +2,30 @@
 
 let result = 0;
 const bonus = 10;
-const q1 = prompt('При какой температуре закипает вода на Эвересте?');
-const q2 = confirm('Правда ли что за минуту мобильные операторы зарабатывают $812 000 тоько на SMS?');
-const q3 = prompt('Введите 10-ую букву русского алфавита.');
+const answer1 = prompt('При какой температуре закипает вода на Эвересте?');
+const answer2 = confirm('Правда ли что за минуту мобильные операторы зарабатывают $812 000 тоько на SMS?');
+const answer3 = prompt('Введите 10-ую букву русского алфавита.');
 
-if (q1 == 72)result += bonus;
+if (answer1 == 72)result += bonus;
 
-if (q2) result += bonus;
+if (answer2) result += bonus;
 
-if (q3 == 'и') result += bonus;
+if (answer3 == 'и') result += bonus;
 
-const message = 'Вы набрали '+result+' баллов!';
+let message = 'Вы набрали '+result+' баллов!';
 
 switch (result) {
     case 0:
-        alert(message + ' Вам необходимо больше читать!');
+        message += ' Вам необходимо больше читать!';
         break;
     case 10:
-        alert(message + ' Попробуйте еще!');
+        message += ' Попробуйте еще!';
         break;
     case 20:
-        alert(message + ' Вы мозг!');
+        message += ' Вы мозг!';
         break;
     case 30:
-        alert(message + ' Вы сверхразум!!!');
+        message += ' Вы сверхразум!!!';
         break;
 }
+alert(message);
