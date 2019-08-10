@@ -11,7 +11,7 @@ while (true) {
         operator == 'sub' ||
         operator == 'mult' ||
         operator == 'div')
-    break;
+        break;
 }
 
 do {
@@ -19,45 +19,40 @@ do {
 }
 while (operandsCount < 1 || operandsCount > 5 || isNaN(operandsCount));
 
+for (let i = 0; i < operandsCount; i++){
+    do {
+        let a = prompt('Введите операнд' );
+    }
+    while (isNaN(a));
+
 switch (operator) {
     case 'add':
-        for (let i = 0; i < operandsCount; i++){
-            let a = prompt('Введите операнд');
             result += Number(a);
-        }
         break;
 
     case 'sub':
-        for (let i = 0; i < operandsCount; i++){
-            let a = prompt('Введите операнд');
             if (!i){
                 result = a;
                 continue;
             }
             result = result - a;
-        }
         break;
 
     case 'mult':
-        for (let i = 0; i < operandsCount; i++){
-            let a = prompt('Введите операнд');
             if (!i){
                 result = a;
                 continue;
             }
             result *= a;
-        }
         break;
 
     case 'div':
-        for (let i = 0; i < operandsCount; i++) {
-            let a = prompt('Введите операнд');
             if (!i) {
                 result = a;
                 continue;
             }
             result = result / a;
-        }
         break;
+    }
 }
   alert("Результат действия " + operator + " равен "+ result);
