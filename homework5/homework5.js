@@ -5,6 +5,13 @@ let oldChar = '';
 let newChar = '';
 let newString ='';
 
+function replaceAll(str, oldChar, newChar) {
+    let index = str.indexOf(oldChar);
+    newString = str.replace(oldChar,newChar);
+
+    return index < 0 ? newString : replaceAll(newString, oldChar, newChar);
+}
+
 do {
     string = prompt('Введите строку');
 }
@@ -19,13 +26,6 @@ do {
     newChar = prompt('Введите символ, на который заменить ' + oldChar)
 }
 while (newChar.length !=1);
-
-function replaceAll(str, oldChar, newChar) {
-    let index = str.indexOf(oldChar);
-    newString = str.replace(oldChar,newChar);
-
-    return index < 0 ? newString : replaceAll(newString, oldChar, newChar);
-}
 
 if (string.indexOf(oldChar) != -1) {
     replaceAll(string,oldChar,newChar);
