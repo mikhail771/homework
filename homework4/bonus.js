@@ -14,13 +14,7 @@ function multiTable() {
     }
 }
 
-multiTable();
-
 do {
+    multiTable();
     oneMore = confirm("Хотите еще?");
-    if(oneMore){
-        multiTable();
-    }
 } while (oneMore);
-
-
