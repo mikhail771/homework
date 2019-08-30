@@ -1,9 +1,8 @@
 'use strict';
 
-const bonus = 10;
-let number = null;
+const BONUS = 10;
 let result = 0;
-let oneMore = null;
+
 
 function random(min,max) {
     return Math.round(min + Math.random()*(max-min));
@@ -11,15 +10,15 @@ function random(min,max) {
 
 function roulette() {
     do {
-        number = prompt('Введите число от 1 до 10');
+        let number = prompt('Введите число от 1 до 10');
     } while (isNaN(number) || number < 1 || number > 10);
 
-    if (number == random(1, 10)) result += bonus;
+    if (prompt('Введите число от 1 до 10') == random(1, 10)) result += BONUS;
 }
 
 do {
     roulette();
-    oneMore = confirm('Еще один раунд?');
+    let oneMore = confirm('Еще один раунд?');
 } while (oneMore);
 
 alert('Ваш результат: ' + result);
