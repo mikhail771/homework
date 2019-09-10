@@ -15,13 +15,13 @@ function Student(name, arrMarks) {
 }
 
 function groupsAverageMark(group) {
-    let averageGroupMark = 0;
+    let averagesGroupMarks = 0;
 
     for(let i = 0; i < group.length; i++){
-        averageGroupMark += group[i].averageMark();
+        averagesGroupMarks += group[i].averageMark();
     }
 
-    return averageGroupMark / group.length;
+    return averagesGroupMarks / group.length;
 }
 
 const student1 = new Student('Karl', [7,7,7,8,8,9]);

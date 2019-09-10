@@ -2,13 +2,10 @@
 
 const btn = document.getElementById('addBtn');
 const list = document.getElementById('list');
-
+const li = document.getElementsByTagName('li');
 function addLiTags(){
     const count = Number(document.getElementById('count').value);
-
-    while (list.firstChild) {
-        list.removeChild(list.firstChild);
-    }
+    li.remove();
 
     for(let i = 1; i < count + 1; i++) {
 
