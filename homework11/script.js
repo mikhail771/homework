@@ -16,9 +16,11 @@ function Student(name, arrMarks) {
 
 function groupsAverageMark(group) {
     let averageGroupMark = 0;
+
     for(let i = 0; i < group.length; i++){
         averageGroupMark += group[i].averageMark();
     }
+
     return averageGroupMark / group.length;
 }
 
@@ -26,8 +28,8 @@ const student1 = new Student('Karl', [7,7,7,8,8,9]);
 
 const group1 = [
 new Student('John', [5,6,1]),
-new Student('Bob', [4,6,7,8,9,5]),
-new Student('Molly', [10,10,9,9])
+new Student('Bob', [4,6,8]),
+new Student('Molly', [5,5,5])
 ];
 
 console.log(group1[0].averageMark());
