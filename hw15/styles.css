@@ -1,0 +1,44 @@
+#table{
+    width: 60%;
+}
+
+table, caption, tr, th, td {
+    border: 1px solid black;
+    margin: 0px;
+    text-align: center;
+}
+
+span {
+    cursor: pointer;
+    color: red;
+    font-size: 30px;
+    border: 1px solid black;
+    background-color: gray;
+    padding: 1px 20px;
+}
+
+caption {
+    font-size: 1.3em;
+    padding: 5px;
+}
+
+p{
+    display: contents;
+}
+
+.inputs-container {
+    margin-top: 30px;
+
+}
+.inputs-container>input {
+    margin-right: 20px;
+    margin-left: 5px;
+}
+
+#save-btn {
+    background-color: #2a9541;
+    width: 60px;
+    height: 30px;
+    border-radius: 4px;
+    cursor: pointer;
+}
