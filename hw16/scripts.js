@@ -19,8 +19,8 @@ function buildGallery(data) {
         img.setAttribute('src', item.url);
         gallery.appendChild(li);
         li.appendChild(img);
-        hangEventShowOne();
-    })
+    });
+    hangEventShowOne();
 }
 
 function createCloseBtn() {

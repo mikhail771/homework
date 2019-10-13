@@ -1,0 +1,32 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+ul {
+    width: 15%;
+
+}
+ul li {
+    font-size: 1.5em;
+    padding-bottom: 8px;
+    border: 1px solid black;
+    cursor: pointer;
+}
+
+#info-container {
+    width: 85%;
+    height: 71%;
+    background-color: rgba(113, 172, 119, 0.85);
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+p {
+    padding: 100px;
+}
+
+.chosen {
+    background-color: rgba(113, 172, 119, 0.85);;
+    border-right: none
+}
