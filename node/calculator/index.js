@@ -1,20 +1,9 @@
 "use strict";
 
-function add(a,b) {
-    return a + b;
-}
-
-function sub(a,b) {
-    return a - b;
-}
-
-function mult(a,b) {
-    return a * b;
-}
-
-function div(a,b) {
-    return a / b;
-}
+const sub = require('./sub');
+const mult = require('./mult');
+const div = require('./div');
+const add = require('./add');
 
 module.exports = {
     sub,

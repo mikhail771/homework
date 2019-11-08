@@ -23,10 +23,47 @@ ul li {
 }
 
 p {
-    padding: 100px;
+    /*padding: 100px;*/
 }
 
 .chosen {
     background-color: rgba(113, 172, 119, 0.85);;
     border-right: none
+}
+
+form{
+    text-align: left;
+
+}
+
+div {
+    margin-left: 100px;
+    margin-bottom: 10px;
+}
+
+b {
+    margin-right: 30px;
+}
+
+input {
+    width: 200px;
+    height: 25px;
+    border-radius: 5px;
+}
+
+.send-btn {
+    margin-top: 40px;
+    margin-left: 180px;
+    background-color: #5962ff;
+    color: #eeeeee;
+    height: 40px;
+    cursor: pointer;
+}
+
+#company {
+    margin-right: 3px;
+}
+
+#name-input {
+    margin-top: 40px;
 }

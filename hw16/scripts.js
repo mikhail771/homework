@@ -1,14 +1,12 @@
 "use strict";
 
-const prom = fetch('https://jsonplaceholder.typicode.com/photos?_limit=50');
+const prom = fetch('https://jsonplaceholder.typicode.com/photos');
 const gallery = document.getElementById('all-photos');
 const photo = document.getElementsByTagName('IMG');
 const darkTheme = document.getElementById('dark-side');
 
 function hangEventShowOne() {
-    for(let i = 0; i < photo.length; i++) {
-        photo[i].addEventListener('click', showOnePhoto);
-    }
+    gallery.addEventListener('click', showOnePhoto);
 }
 
 function buildGallery(data) {
@@ -34,24 +32,26 @@ function createCloseBtn() {
     return span;
 }
 
-function showOnePhoto() {
-    this.classList.add('show');
+function showOnePhoto(event) {
+    let target = event.target;
+    target.classList.add('show');
     makeDarkness();
-    this.parentElement.appendChild(createCloseBtn());
+    target.parentElement.appendChild(createCloseBtn());
 }
 
 function makeDarkness() {
-    darkTheme.style.display = "block";
+    darkTheme.classList.remove("hide-dark");
 }
 
 function hidePhoto() {
-    darkTheme.style.display = "none";
     this.previousSibling.classList.remove('show');
+    darkTheme.classList.add("hide-dark");
     this.remove();
 }
 
 prom.then((resp) => {
     resp.json().then((data) => {
+        alert(data.length);
         buildGallery(data);
     })
 });
